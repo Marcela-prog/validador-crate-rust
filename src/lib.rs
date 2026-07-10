@@ -46,7 +46,7 @@ pub fn cpf_cpf(cpf: &str) -> bool {
 
     pub fn validar_cnpj(cnpj: &str) -> bool {
         // 1. Remove qualquer caractere que não seja dígito
-        let mut digitos: Vec<u32> = cnpj
+        let digitos: Vec<u32> = cnpj
             .chars()
             .filter_map(|c| c.to_digit(10))
             .collect();
@@ -92,5 +92,5 @@ pub fn cpf_cpf(cpf: &str) -> bool {
 }
 
 
-}   
+
 
