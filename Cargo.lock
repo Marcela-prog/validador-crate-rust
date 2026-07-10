@@ -4,4 +4,4 @@ version = 4
 
 [[package]]
 name = "validador_crate_rust_ma"
-version = "0.1.0"
+version = "1.0.0"

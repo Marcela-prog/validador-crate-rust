@@ -45,7 +45,7 @@ validador_crate_rust = { path = "../validador" }
 validador_crate_rust = { git = "https://github.com/Marcela-prog/validador-crate-rust.git" }
 
 # Busca pelo crates.io
-validador_crate_rust = "0.1.0"
+validador_crate_rust = "1.0.0"
 ```
 
 Depois execute:
@@ -79,7 +79,8 @@ fn main() {
         }
     }
 
-    let validado = vd::validar_cpf(cpf.trim());
+    let validado = vd::validador::cpf(cpf.trim());
+    //let validado = vd::validador::cnpj( cnpj.trim()); ou CNPJ
 
     if validado {
         println!("O CPF é válido.");
