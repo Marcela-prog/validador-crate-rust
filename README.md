@@ -39,13 +39,13 @@ Adicione a crate no arquivo `Cargo.toml`:
 [dependencies]
 
 # Busca diretório local
-validador_crate_rust = { path = "../validador" }
+validador_crate_rust_ma = { path = "../validador" }
 
 # Busca pelo GitHub
-validador_crate_rust = { git = "https://github.com/Marcela-prog/validador-crate-rust.git" }
+validador_crate_rust_ma = { git = "https://github.com/Marcela-prog/validador-crate-rust.git" }
 
 # Busca pelo crates.io
-validador_crate_rust = "0.1.0"
+validador_crate_rust_ma = "0.1.0"
 ```
 
 Depois execute:
@@ -59,7 +59,7 @@ cargo build
 ## 🚀 Exemplo de uso
 
 ```rust
-use validador_crate_rust as vd;
+use validador_crate_rust_ma as vd;
 use std::io;
 
 fn main() {
@@ -153,7 +153,7 @@ Este projeto foi desenvolvido durante os estudos de:
 **Marcela Nogueira**
 
 * GitHub: https://github.com/Marcela-prog
-* LinkedIn: (adicione seu perfil aqui)
+* LinkedIn: "https://www.linkedin.com/in/marcela-nogueira-855272191"
 
 ---
 
