@@ -8,11 +8,11 @@ Este projeto foi desenvolvido durante os estudos sobre **Crates**, **modulariza�
 
 ## ✨ Funcionalidades
 
-- ✅ Validação de CPF utilizando o algoritmo oficial
-- ✅ Aceita CPF com ou sem formatação
-- ✅ Rejeita CPFs com todos os dígitos iguais
-- ✅ API simples e fácil de utilizar
-- ✅ Sem dependências externas
+* ✅ Validação de CPF utilizando o algoritmo oficial
+* ✅ Aceita CPF com ou sem formatação
+* ✅ Rejeita CPFs com todos os dígitos iguais
+* ✅ API simples e fácil de utilizar
+* ✅ Sem dependências externas
 
 ---
 
@@ -33,11 +33,19 @@ validador-crate-rust
 
 ## 📦 Instalação
 
-Enquanto a crate não estiver publicada no crates.io, utilize diretamente pelo GitHub:
+Adicione a crate no arquivo `Cargo.toml`:
 
 ```toml
 [dependencies]
-validador = { git = "https://github.com/Marcela-prog/validador-crate-rust.git" }
+
+# Busca diretório local
+validador_crate_rust = { path = "../validador" }
+
+# Busca pelo GitHub
+validador_crate_rust = { git = "https://github.com/Marcela-prog/validador-crate-rust.git" }
+
+# Busca pelo crates.io
+validador_crate_rust = "0.1.0"
 ```
 
 Depois execute:
@@ -51,15 +59,32 @@ cargo build
 ## 🚀 Exemplo de uso
 
 ```rust
-use validador::validar_cpf;
+use validador_crate_rust as vd;
+use std::io;
 
 fn main() {
-    let cpf = "529.982.247-25";
 
-    if validar_cpf(cpf) {
-        println!("CPF válido!");
+    println!("Digite um CPF para validar (sem pontuação)");
+
+    let mut cpf = String::new();
+
+    match io::stdin().read_line(&mut cpf) {
+        Ok(_) => {
+            println!("Você digitou: {}", cpf.trim());
+        }
+
+        Err(e) => {
+            println!("Erro ao ler a entrada: {}", e);
+            return;
+        }
+    }
+
+    let validado = vd::validar_cpf(cpf.trim());
+
+    if validado {
+        println!("O CPF é válido.");
     } else {
-        println!("CPF inválido!");
+        println!("O CPF é inválido.");
     }
 }
 ```
@@ -76,9 +101,9 @@ pub fn validar_cpf(cpf: &str) -> bool
 
 Recebe uma string contendo um CPF e retorna:
 
-| Retorno | Significado |
-|---------|-------------|
-| `true` | CPF válido |
+| Retorno | Significado  |
+| ------- | ------------ |
+| `true`  | CPF válido   |
 | `false` | CPF inválido |
 
 ---
@@ -87,17 +112,17 @@ Recebe uma string contendo um CPF e retorna:
 
 A função realiza as seguintes verificações:
 
-- Remove caracteres de formatação automaticamente;
-- Verifica se existem exatamente 11 dígitos;
-- Rejeita sequências com todos os dígitos iguais;
-- Calcula e valida os dois dígitos verificadores conforme o algoritmo oficial da Receita Federal.
+* Remove caracteres de formatação automaticamente;
+* Verifica se existem exatamente 11 dígitos;
+* Rejeita sequências com todos os dígitos iguais;
+* Calcula e valida os dois dígitos verificadores conforme o algoritmo oficial da Receita Federal.
 
 ---
 
 ## 🛠 Tecnologias utilizadas
 
-- Rust
-- Cargo
+* Rust
+* Cargo
 
 ---
 
@@ -105,21 +130,21 @@ A função realiza as seguintes verificações:
 
 Este projeto foi desenvolvido durante os estudos de:
 
-- Modularização com Crates
-- Criação de bibliotecas Rust
-- Dependências locais
-- Dependências via GitHub
-- Organização de código com Namespaces
-- Publicação de Crates
+* Modularização com Crates
+* Criação de bibliotecas Rust
+* Dependências locais
+* Dependências via GitHub
+* Organização de código com Namespaces
+* Publicação de Crates
 
 ---
 
 ## 🚀 Próximas melhorias
 
-- [ ] Publicação no crates.io
-- [ ] Documentação utilizando rustdoc
-- [ ] Testes automatizados
-- [ ] CI com GitHub Actions
+* [ ] Publicação no crates.io
+* [ ] Documentação utilizando rustdoc
+* [ ] Testes automatizados
+* [ ] CI com GitHub Actions
 
 ---
 
@@ -127,9 +152,10 @@ Este projeto foi desenvolvido durante os estudos de:
 
 **Marcela Nogueira**
 
-- GitHub: https://github.com/Marcela-prog
-- LinkedIn: (adicione seu perfil aqui)
+* GitHub: https://github.com/Marcela-prog
+* LinkedIn: (adicione seu perfil aqui)
 
 ---
 
 ⭐ Se este projeto foi útil para você, deixe uma estrela no repositório!
+
