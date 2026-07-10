@@ -2,5 +2,11 @@
 name = "validador_crate_rust"
 version = "0.1.0"
 edition = "2024"
+authors = "Marcela <mahhnogueira100@gmail.com>"
+description = "Aula de como criar uma Crate"
+licence = "Free"
+repository = "https://github.com/Marcela-prog/validador-crate-rust"
+documentation = "https://github.com/Marcela-prog/validador-crate-rust"
+homepage = "https://github.com/Marcela-prog/validador-crate-rust"
 
 [dependencies]
