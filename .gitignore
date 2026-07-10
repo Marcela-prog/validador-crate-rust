@@ -1,0 +1,116 @@
+/target
+
+
+# Criado por https://www.toptal.com/developers/gitignore/api/rust,visualstudiocode,windows,macos,linux
+# Edite em https://www.toptal.com/developers/gitignore?templates=rust,visualstudiocode,windows,macos,linux
+
+### Linux ###
+*~
+
+# Arquivos temporários que podem ser criados se um processo ainda tiver um identificador aberto para um arquivo excluído.
+.fuse_hidden*
+
+# Preferências de diretório do KDE
+.diretório
+
+# Pasta Lixeira do Linux que pode aparecer em qualquer partição ou disco
+.Lixo-*
+
+Os arquivos .nfs são criados quando um arquivo aberto é removido, mas ainda está sendo acessado.
+.nfs*
+
+### macOS ###
+# Em geral
+.DS_Store
+.MaçãDupla
+.LSOverride
+
+# O ícone deve terminar com duas \r
+Ícone
+
+
+# Miniaturas
+._*
+
+# Arquivos que podem aparecer na raiz de um volume
+.RevisõesDocumento-V100
+.fseventsd
+.Refletor-V100
+.ItensTemporários
+.Lixos
+.VolumeIcon.icns
+.com.apple.timemachine.nãoapresenta
+
+# Diretórios potencialmente criados em compartilhamento AFP remoto
+.AppleDB
+.AppleDesktop
+Pasta de lixo da rede
+Itens temporários
+.apdisk
+
+### Patch para macOS ###
+# Arquivos gerados pelo iCloud
+*.icloud
+
+### Ferrugem ###
+# Gerado por Cargo
+# terá arquivos compilados e executáveis
+depurar/
+alvo/
+
+# Remova o arquivo Cargo.lock do .gitignore se estiver criando um executável; deixe-o para bibliotecas.
+# Mais informações aqui: https://doc.rust-lang.org/cargo/guide/cargo-toml-vs-cargo-lock.html
+Carga.lock
+
+# Estes são arquivos de backup gerados pelo rustfmt
+**/*.rs.bk
+
+# As compilações do rustc para MSVC no Windows geram esses arquivos, que armazenam informações de depuração.
+*.pdb
+
+### VisualStudioCode ###
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+!.vscode/*.code-snippets
+
+# Histórico Local para Visual Studio Code
+.história/
+
+# Extensões do Visual Studio Code criadas
+*.vsix
+
+### Patch do Visual Studio Code ###
+# Ignorar todo o histórico local dos arquivos
+.história
+.ionídeo
+
+### Windows ###
+# Arquivos de cache de miniaturas do Windows
+Thumbs.db
+Thumbs.db:encriptável
+ehthumbs.db
+ehthumbs_vista.db
+
+# Arquivo de despejo
+*.stackdump
+
+# Arquivo de configuração da pasta
+[Dd]esktop.ini
+
+# Lixeira usada em compartilhamentos de arquivos
+$RECYCLE.BIN/
+
+# Arquivos do Windows Installer
+*.táxi
+*.msi
+*.msix
+*.msm
+*.msp
+
+# Atalhos do Windows
+*.lnk
+
+# Fim de https://www.toptal.com/developers/gitignore/api/rust,visualstudiocode,windows,macos,linux
